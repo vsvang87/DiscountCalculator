@@ -80,6 +80,9 @@ p {
     margin-left: 3.5rem;
     font-weight: normal;
 }
+.saved-amount {
+    margin-left: 4.8rem;
+}
 .final-pay {
     margin-left: 7.2rem;
 }
