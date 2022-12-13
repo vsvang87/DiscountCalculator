@@ -1,0 +1,129 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+:root {
+    --clr-one: #83afa6;
+    --clr-two: #0b8457;
+    --clr-three: rgb(36, 33, 33);
+    --clr-green: #468966;
+    --clr-blue: #1c7293;
+    --clr-offWhite: #fff;
+}
+body {
+    font-family: 'Roboto Condensed', sans-serif;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--clr-one);
+}
+.container {
+    max-width: 600px;
+    width: 480px;
+    height: 490px;
+    background-color: var(--clr-offWhite);
+    border: none;
+    border-radius: 5px;
+}
+h1{
+    font-size: 1.3rem;
+    padding: 1rem;
+    border-radius: 5px 5px 0 0;
+    background: var(--clr-green);
+    color: var(--clr-offWhite);
+}
+.form {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.group-input {
+    padding: 1.2rem 0;
+    width: 100%;
+    display: inline-block;
+}
+.error-message {
+    text-align: center;
+    display: block;
+    font-style: italic;
+    padding-left: 3.5rem;
+    display: none;
+}
+.error-message.error{
+    display: block;
+    color: rgb(209, 41, 41);
+}
+input{
+    padding: 0.5rem 1rem .5rem 0.3rem;
+    margin: 0 3rem;
+    outline: none;
+    border: 1px solid var(--clr-three);
+    font-family: Arial, Helvetica, sans-serif;
+    width: 40%;
+}
+label{
+    font-weight: bold;
+}
+select {
+    outline: none;
+    border: 1px solid var(--clr-three);
+    margin: 0 3rem;
+    padding: 0.2rem;
+}
+p {
+    font-weight: bold;
+}
+.span {
+    margin-left: 3.5rem;
+    font-weight: normal;
+}
+.final-pay {
+    margin-left: 7.2rem;
+}
+.button-group {
+    display: flex;
+    flex-direction: column;
+}
+.btn {
+    padding: 0.5rem 1rem;
+    margin: 0.5rem 0;
+    border: none;
+    font-size: 1.5rem;
+    color: var(--clr-offWhite);
+    cursor: pointer;
+}
+.calculate {
+    background: var(--clr-blue);
+}
+.reset {
+    background: var(--clr-two);
+}
+@media (max-width: 470px) {
+    .container{
+        width: fit-content;
+        height: fit-content;
+    }
+    .group-input{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+    }
+    input {
+        width: 50%;
+        align-items: flex-start;
+    }
+    select {
+        width: 50%;
+    }
+    .btn {
+        width: 100%;
+    }
+    .error-message{
+        padding-left: 0;
+    }
+}

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="/css/style.css" />
+    <title>Discount Calculator</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Percentage Discount Calculator</h1>
+      <form action="" class="form">
+        <div class="group-input">
+          <label for="amount">Enter Full Amount:</label>
+          <input type="text" id="amount" placeholder="Enter full amount..." />
+          <small class="error-message" id="error">*Enter number only*</small>
+        </div>
+        <div class="group-input">
+          <label for="discount">Select discount %:</label>
+          <select name="discount" id="discount-percentage">
+            <option value="5">5</option>
+            <option value="10">10</option>
+            <option value="15">15</option>
+            <option value="20">20</option>
+            <option value="25">25</option>
+            <option value="30">30</option>
+            <option value="35">35</option>
+            <option value="40">40</option>
+            <option value="45">45</option>
+            <option value="50">50</option>
+          </select>
+        </div>
+        <div class="group-input">
+          <p>
+            Discount amount: <span class="span" id="discount-amount">0</span>
+          </p>
+        </div>
+        <div class="group-input">
+          <p>Final Pay: <span class="span final-pay" id="final-pay">0</span></p>
+        </div>
+        <div class="group-input button-group">
+          <button type="submit" class="btn calculate" id="calculate">
+            Calculate
+          </button>
+          <button type="reset" class="btn reset" id="reset">Reset</button>
+        </div>
+      </form>
+    </div>
+    <script src="/js/main.js"></script>
+  </body>
+</html>
