@@ -4,7 +4,7 @@
     box-sizing: border-box;
 }
 :root {
-    --clr-one: #83afa6;
+    --clr-one: #93a7d1;
     --clr-two: #0b8457;
     --clr-three: rgb(36, 33, 33);
     --clr-green: #468966;
@@ -22,7 +22,7 @@ body {
 .container {
     max-width: 600px;
     width: 480px;
-    height: 490px;
+    height: 500px;
     background-color: var(--clr-offWhite);
     border: none;
     border-radius: 5px;
@@ -43,13 +43,14 @@ h1{
 .group-input {
     padding: 1.2rem 0;
     width: 100%;
-    display: inline-block;
+    display: flex;
+    justify-content: space-between;
 }
 .error-message {
     text-align: center;
     display: block;
     font-style: italic;
-    padding-left: 3.5rem;
+    padding-left: 6.5rem;
     display: none;
 }
 .error-message.error{
@@ -73,18 +74,10 @@ select {
     margin: 0 3rem;
     padding: 0.2rem;
 }
-p {
-    font-weight: bold;
-}
-.span {
-    margin-left: 3.5rem;
-    font-weight: normal;
-}
-.saved-amount {
-    margin-left: 4.8rem;
-}
-.final-pay {
-    margin-left: 7.2rem;
+.underline {
+    border-top: none;
+    border-left: none;
+    border-right: none;
 }
 .button-group {
     display: flex;
@@ -97,6 +90,7 @@ p {
     font-size: 1.5rem;
     color: var(--clr-offWhite);
     cursor: pointer;
+    border-radius: 5px;
 }
 .calculate {
     background: var(--clr-blue);
@@ -119,9 +113,10 @@ p {
     input {
         width: 50%;
         align-items: flex-start;
+        text-align: center;
     }
     select {
-        width: 50%;
+        width: 20%;
     }
     .btn {
         width: 100%;

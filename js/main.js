@@ -7,9 +7,9 @@ calculateBtn.addEventListener("click", (e) => {
   //grabbing all selectors
   const fullAmount = document.getElementById("amount").value;
   const discountValue = document.getElementById("discount-percentage").value;
-  const finalPay = document.getElementById("final-pay");
-  const discountAmount = document.getElementById("discount-amount");
   const errorMessage = document.getElementById("error");
+  const savedAmount = document.getElementById("save-amount");
+  const finalPay = document.getElementById("final-pay");
 
   //check for number
   const pattern = /^[0-9.]*$/g;
@@ -20,17 +20,21 @@ calculateBtn.addEventListener("click", (e) => {
   }
   if (fullAmount.match(pattern)) {
     errorMessage.classList.remove("error");
-    discountAmount.innerHTML = "0";
+    savedAmount.innerHTML = "0";
     finalPay.innerHTML = "0";
   }
 
   //calculate
   const discountAmt = fullAmount * discountValue;
   const fulldisAmt = discountAmt / 100;
-  discountAmount.innerHTML = "$ " + fulldisAmt;
+  //to round it off to 2 decimal places
+  const finalSaveAmt = fulldisAmt.toFixed(2);
+  savedAmount.value = "$ " + finalSaveAmt;
 
   const finalAmt = fullAmount - fulldisAmt;
-  finalPay.innerHTML = "$ " + finalAmt;
+  //to round it off to 2 decimal places
+  const finalResult = finalAmt.toFixed(2);
+  finalPay.value = "$ " + finalResult;
 });
 
 //reset

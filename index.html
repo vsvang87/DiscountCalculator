@@ -16,6 +16,8 @@
         <div class="group-input">
           <label for="amount">Enter Full Amount:</label>
           <input type="text" id="amount" placeholder="Enter full amount..." />
+        </div>
+        <div class="error-div">
           <small class="error-message" id="error">*Enter number only*</small>
         </div>
         <div class="group-input">
@@ -34,13 +36,12 @@
           </select>
         </div>
         <div class="group-input">
-          <p>
-            Saved amount:
-            <span class="span saved-amount" id="discount-amount">0</span>
-          </p>
+          <label for="save-amount">Saved Amount:</label>
+          <input type="text" id="save-amount" class="underline" />
         </div>
         <div class="group-input">
-          <p>Final Pay: <span class="span final-pay" id="final-pay">0</span></p>
+          <label for="final-pay">Final Pay:</label>
+          <input type="text" id="final-pay" class="underline" />
         </div>
         <div class="group-input button-group">
           <button type="submit" class="btn calculate" id="calculate">
